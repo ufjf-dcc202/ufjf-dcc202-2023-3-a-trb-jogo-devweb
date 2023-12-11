@@ -29,3 +29,7 @@ body, html{
     text-align: center;
     color: aliceblue;
 }
+
+.btn{
+    margin-top: 30px;
+}
