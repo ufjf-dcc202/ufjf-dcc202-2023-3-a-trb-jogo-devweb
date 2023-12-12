@@ -1,0 +1,9 @@
+
+
+.conteinerJogo{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/public/assets/pxfuel.jpg);
+    z-index: 1;
+    position: fixed;
+}
