@@ -6,4 +6,15 @@
     background-image: url(/public/assets/pxfuel.jpg);
     z-index: 1;
     position: fixed;
+    display: grid;
+    place-items: center;
+}
+
+.tabela{
+    color: white;
+    width: 15%;
+    height: 50%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 5px solid #2C3034;
 }
