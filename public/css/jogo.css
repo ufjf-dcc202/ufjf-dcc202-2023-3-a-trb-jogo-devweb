@@ -27,7 +27,7 @@
 
 .tabela{
     color: white;
-    width: 40%;
+    width: 46.02%;
     height: 30%;
     text-align: center;
     border-collapse: collapse;
@@ -36,4 +36,11 @@
 
 #tabela {
     margin-bottom: 10%;
+}
+
+.td{
+    width: 33.33%;
+    height: 33.33%;
+    border-collapse: collapse;
+    border: 2.5px solid #2C3034;
 }
