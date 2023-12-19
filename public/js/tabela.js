@@ -114,7 +114,7 @@ function jCheio(){
         {
             alert(`A elfa ganhou ${ptsAdv.innerHTML} x ${ptsJgdr.innerHTML}`);
             location.reload();
-        }else if(vencedor == 3)
+        }else if(vencedor == 2)
         {
             alert(`Houve um empate ${ptsJgdr.innerHTML} x ${ptsAdv.innerHTML}`);
             location.reload();

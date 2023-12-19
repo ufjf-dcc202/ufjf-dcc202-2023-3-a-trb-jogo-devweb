@@ -1,6 +1,6 @@
 import { iSelectCol } from "./adiversario.js";
 import { dado } from "./dado.js";
-import { final, pontuacaoJogador, pontuacaoadiversario } from "./pontuação.js";
+import { pontuacaoJogador, pontuacaoadiversario } from "./pontuação.js";
 import { podecol1, podecol2, podecol3, selectCol } from "./tabela.js";
 
 const rodar = document.querySelector('#rolar');
