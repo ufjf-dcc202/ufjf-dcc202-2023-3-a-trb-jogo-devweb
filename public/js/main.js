@@ -37,13 +37,15 @@ function turnocomputador()
     const valorAtual = dado();
     Icaixadado.innerHTML = valorAtual;
 
-    iSelectCol(valorAtual);
-    Icaixadado.innerHTML = '';
-
-    totalComputador = pontuacaoadiversario();
-    ptsAdv.innerHTML = totalComputador;
-
-    rodar.addEventListener('click', turnojogador);
+    setTimeout(function(){
+        iSelectCol(valorAtual);
+        Icaixadado.innerHTML = '';
+    
+        totalComputador = pontuacaoadiversario();
+        ptsAdv.innerHTML = totalComputador;
+    
+        rodar.addEventListener('click', turnojogador);
+    }, 1000);
 }
 
 function selectCol1()
