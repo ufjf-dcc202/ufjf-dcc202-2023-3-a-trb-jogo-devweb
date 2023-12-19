@@ -212,73 +212,86 @@ function iSelectCol1(valorAtual){
     if(Il3c1.innerHTML === '')
     {
         Il3c1.innerHTML = valorAtual;
-        iRemover(1, valorAtual);
-        return true;
+        
     }else if(Il2c1.innerHTML == '')
     {
         Il2c1.innerHTML = valorAtual;
-        iRemover(1, valorAtual);
-        return true;
+        
     }else if(Il1c1.innerHTML == '')
     {
         Il1c1.innerHTML = valorAtual;
-        iRemover(1, valorAtual);
-        return true;
+        
     }else
     {
         return false;
     }
+
+    iRemover(1, valorAtual);
+    iCheio();
+    return true;
 }
 
 function iSelectCol2(valorAtual){
     if(Il3c2.innerHTML === '')
     {
         Il3c2.innerHTML = valorAtual;
-        iRemover(2, valorAtual);
-        return true;
+        
     }else if(Il2c2.innerHTML == '')
     {
         Il2c2.innerHTML = valorAtual;
-        iRemover(2, valorAtual);
-        return true;
+        
     }else if(Il1c2.innerHTML == '')
     {
         Il1c2.innerHTML = valorAtual;
-        iRemover(2, valorAtual);
-        return true;
+        
     }else
     {
         return false;
     }
+
+    iRemover(2, valorAtual);
+    iCheio();
+    return true;
 }
 
 function iSelectCol3(valorAtual){
     if(Il3c3.innerHTML === '')
     {
         Il3c3.innerHTML = valorAtual;
-        iRemover(3, valorAtual);
-        return true;
+        
     }else if(Il2c3.innerHTML == '')
     {
         Il2c3.innerHTML = valorAtual;
-        iRemover(3, valorAtual);
-        return true;
+        
     }else if(Il1c3.innerHTML == '')
     {
         Il1c3.innerHTML = valorAtual;
-        iRemover(3, valorAtual);
-        return true;
+        
     }else
     {
         return false;
     }
+
+    iRemover(3, valorAtual);
+    iCheio();
+    return true;
 }
 
-export function iCheio()
+function iCheio()
 {
     if(Col1Cheia() && Col2Cheia() && Col3Cheia())
     {
-        return true;
+        const vencedor = final();
+        if(vencedor == 0)
+        {
+            alert('Você ganhou!');
+        }else if(vencedor == 1)
+        {
+            alert('O adversário ganhou!');
+        }else if(vencedor == 3)
+        {
+            alert('Empate!');
+        }
     }
 }
 

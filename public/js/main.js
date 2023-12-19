@@ -1,4 +1,4 @@
-import { iCheio, iSelectCol } from "./adiversario.js";
+import { iSelectCol } from "./adiversario.js";
 import { dado } from "./dado.js";
 import { final, pontuacaoJogador, pontuacaoadiversario } from "./pontuação.js";
 import { podecol1, podecol2, podecol3, selectCol } from "./tabela.js";
@@ -34,7 +34,6 @@ function turnojogador()
 
 function turnocomputador()
 {
-
     const valorAtual = dado();
     Icaixadado.innerHTML = valorAtual;
 
@@ -45,21 +44,6 @@ function turnocomputador()
     ptsAdv.innerHTML = totalComputador;
 
     rodar.addEventListener('click', turnojogador);
-
-    if(iCheio())
-    {
-        const vencedor = final();
-        if(vencedor == 0)
-        {
-            alert('Você ganhou!');
-        }else if(vencedor == 1)
-        {
-            alert('O adversário ganhou!');
-        }else if(vencedor == 3)
-        {
-            alert('Empate!');
-        }
-    }
 }
 
 function selectCol1()
