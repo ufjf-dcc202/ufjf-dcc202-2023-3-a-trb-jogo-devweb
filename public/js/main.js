@@ -1,7 +1,7 @@
 import { iSelectCol } from "./adiversario.js";
 import { dado } from "./dado.js";
 import { pontuacaoJogador } from "./pontuação.js";
-import { selectCol } from "./tabela.js";
+import { podecol1, podecol2, podecol3, selectCol } from "./tabela.js";
 
 const rodar = document.querySelector('#rolar');
 const c1 = document.querySelector('#c1');
@@ -46,33 +46,42 @@ function turnocomputador()
 
 function selectCol1()
 {
-    selectCol(1, Jcaixadado.innerHTML);
-    Jcaixadado.innerHTML = '';
+    const pode = podecol1();
+    if(pode){
+        selectCol(1, Jcaixadado.innerHTML);
+        Jcaixadado.innerHTML = '';
 
-    totalJogador = pontuacaoJogador();
-    ptsJgdr.innerHTML = totalJogador;
+        totalJogador = pontuacaoJogador();
+        ptsJgdr.innerHTML = totalJogador;
 
-    turnocomputador();
+        turnocomputador();
+    } 
 }
 
 function selectCol2()
 {
-    selectCol(2, Jcaixadado.innerHTML);
-    Jcaixadado.innerHTML = '';
-
-    totalJogador = pontuacaoJogador();
-    ptsJgdr.innerHTML = totalJogador;
-
-    turnocomputador();
+    const pode = podecol2();
+    if(pode){
+        selectCol(2, Jcaixadado.innerHTML);
+        Jcaixadado.innerHTML = '';
+    
+        totalJogador = pontuacaoJogador();
+        ptsJgdr.innerHTML = totalJogador;
+    
+        turnocomputador();
+    }
 }
 
 function selectCol3()
 {
-    selectCol(3, Jcaixadado.innerHTML);
-    Jcaixadado.innerHTML = '';
-
-    totalJogador = pontuacaoJogador();
-    ptsJgdr.innerHTML = totalJogador;
-
-    turnocomputador();
+    const pode = podecol3();
+    if(pode){
+        selectCol(3, Jcaixadado.innerHTML);
+        Jcaixadado.innerHTML = '';
+    
+        totalJogador = pontuacaoJogador();
+        ptsJgdr.innerHTML = totalJogador;
+    
+        turnocomputador();
+    }
 }

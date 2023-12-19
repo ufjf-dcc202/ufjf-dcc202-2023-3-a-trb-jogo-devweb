@@ -53,3 +53,32 @@ export function selectCol(col, valorAtual)
           }
     }
 }
+
+export function podecol1(){
+    if(Jl1c1.innerHTML === '' || Jl2c1.innerHTML === '' || Jl3c1.innerHTML === '')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }  
+}
+
+export function podecol2(){
+    if(Jl1c2.innerHTML === '' || Jl2c2.innerHTML === '' || Jl3c2.innerHTML === '')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }  
+}
+export function podecol3(){
+    if(Jl1c3.innerHTML === '' || Jl2c3.innerHTML === '' || Jl3c3.innerHTML === '')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }  
+}
