@@ -1,3 +1,5 @@
+import { pontuacaoJogador, pontuacaoadiversario } from "./pontuação.js";
+
 
 
 export function jRemover(col, valordado){
@@ -13,6 +15,10 @@ export function jRemover(col, valordado){
     {
         jRemoverCol3(valordado);
     }
+
+    let totalComputador = pontuacaoadiversario();
+    ptsAdv.innerHTML = totalComputador;
+
 }
 
 export function iRemover(col, valordado)
@@ -29,6 +35,9 @@ export function iRemover(col, valordado)
     {
         iRemoverCol3(valordado);
     }
+
+    let totalJogador = pontuacaoJogador();
+    ptsJgdr.innerHTML = totalJogador;
 }
 
 function jRemoverCol1(valordado)
