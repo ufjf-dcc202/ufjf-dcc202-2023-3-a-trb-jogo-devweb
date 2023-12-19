@@ -266,7 +266,31 @@ function iSelectCol3(valorAtual){
 
 export function iCheio()
 {
-    if(!iSelectCol1(valordado) && !iSelectCol2(valordado) && !iSelectCol3(valordado))
+    if(Col1Cheia() && Col2Cheia() && Col3Cheia())
+    {
+        return true;
+    }
+}
+
+function Col1Cheia()
+{
+    if(Il3c1.innerHTML != '' && Il2c1.innerHTML != '' && Il1c1.innerHTML != '')
+    {
+        return true;
+    }
+}
+
+function Col2Cheia()
+{
+    if(Il3c2.innerHTML != '' && Il2c2.innerHTML != '' && Il1c2.innerHTML != '')
+    {
+        return true;
+    }
+}
+
+function Col3Cheia()
+{
+    if(Il3c3.innerHTML != '' && Il2c3.innerHTML != '' && Il1c3.innerHTML != '')
     {
         return true;
     }
