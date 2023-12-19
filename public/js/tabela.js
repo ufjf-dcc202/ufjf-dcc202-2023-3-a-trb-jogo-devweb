@@ -108,15 +108,15 @@ function jCheio(){
         const vencedor = final();
         if(vencedor == 0)
         {
-            alert('Você ganhou!');
+            alert(`O fazendeiro ganhou ${ptsJgdr.innerHTML} x ${ptsAdv.innerHTML}`);
             location.reload();
         }else if(vencedor == 1)
         {
-            alert('O adversário ganhou!');
+            alert(`A elfa ganhou ${ptsAdv.innerHTML} x ${ptsJgdr.innerHTML}`);
             location.reload();
         }else if(vencedor == 3)
         {
-            alert('Empate!');
+            alert(`Houve um empate ${ptsJgdr.innerHTML} x ${ptsAdv.innerHTML}`);
             location.reload();
         }
     }
