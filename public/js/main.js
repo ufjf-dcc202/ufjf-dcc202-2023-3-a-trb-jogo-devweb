@@ -1,6 +1,6 @@
 import { iSelectCol } from "./adiversario.js";
 import { dado } from "./dado.js";
-import { pontuacaoJogador } from "./pontuação.js";
+import { pontuacaoJogador, pontuacaoadiversario } from "./pontuação.js";
 import { podecol1, podecol2, podecol3, selectCol } from "./tabela.js";
 
 const rodar = document.querySelector('#rolar');
@@ -35,11 +35,13 @@ function turnojogador()
 function turnocomputador()
 {
     const valorAtual = dado();
-    console.log(valorAtual);
     Icaixadado.innerHTML = valorAtual;
 
     iSelectCol(valorAtual);
     Icaixadado.innerHTML = '';
+
+    totalComputador = pontuacaoadiversario();
+    ptsAdv.innerHTML = totalComputador;
 
     rodar.addEventListener('click', turnojogador);
 }
