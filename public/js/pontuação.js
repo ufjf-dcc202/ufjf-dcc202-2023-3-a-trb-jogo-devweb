@@ -1,13 +1,27 @@
 
 
 
+export function final()
+{
+    if(pontuacaoJogador() > pontuacaoadiversario())
+    {
+        return 0;
+    }else if(pontuacaoJogador() < pontuacaoadiversario())
+    {
+        return 1;
+    }else if(pontuacaoJogador() == pontuacaoadiversario())
+    {
+        return 2;
+    }
+}
+
 export function pontuacaoJogador(){
-    const totalJogador = Jl1c1() + Jl1c2() + Jl1c3() + Jl2c1() + Jl2c2() + Jl2c3() + Jl3c1() + Jl3c2() + Jl3c3();
+    const totalJogador = jCol1() + jCol2() + jCol3();
     return totalJogador;
 }
 
 export function pontuacaoadiversario(){
-    const totaladiversario = Il1c1() + Il1c2() + Il1c3() + Il2c1() + Il2c2() + Il2c3() + Il3c1() + Il3c2() + Il3c3();
+    const totaladiversario = iCol1() + iCol2() + iCol3();
     return totaladiversario;
 }
 
@@ -267,3 +281,175 @@ function Il3c3()
     return numeroIl3c3;
 }
 
+function jCol1(){
+
+    let multiplicador = 1;
+
+    if(Jl1c1() == Jl2c1() || Jl1c1() == Jl3c1())
+    {
+        multiplicador++;
+        if(Jl1c1() == Jl2c1() && Jl1c1() == Jl3c1())
+        {
+            multiplicador++;
+            return ((Jl1c1() + Jl2c1() + Jl3c1()) * multiplicador);
+        }else if (Jl1c1() == Jl2c1())
+        {
+            return ((Jl1c1() + Jl2c1()) * multiplicador + Jl3c1());
+        }else if (Jl1c1() == Jl3c1())
+        {
+            return ((Jl1c1() + Jl3c1()) * multiplicador + Jl2c1());
+        }
+    } else if(Jl2c1() == Jl3c1())
+    {
+        multiplicador++;
+        return ((Jl2c1() + Jl3c1()) * multiplicador + Jl1c1());
+    }else
+    {
+        return (Jl1c1() + Jl2c1() + Jl3c1());
+    }
+
+}
+
+function jCol2(){
+
+    let multiplicador = 1;
+
+    if(Jl1c2() == Jl2c2() || Jl1c2() == Jl3c2())
+    {
+        multiplicador++;
+        if(Jl1c2() == Jl2c2() && Jl1c2() == Jl3c2())
+        {
+            multiplicador++;
+            return ((Jl1c2() + Jl2c2() + Jl3c2()) * multiplicador);
+        }else if (Jl1c2() == Jl2c2())
+        {
+            return ((Jl1c2() + Jl2c2()) * multiplicador + Jl3c2());
+        }else if (Jl1c2() == Jl3c2())
+        {
+            return ((Jl1c2() + Jl3c2()) * multiplicador + Jl2c2());
+        }
+    } else if(Jl2c2() == Jl3c2())
+    {
+        multiplicador++;
+        return ((Jl2c2() + Jl3c2()) * multiplicador + Jl1c2());
+    }else
+    {
+        return (Jl1c2() + Jl2c2() + Jl3c2());
+    }
+}
+
+function jCol3(){
+
+    let multiplicador = 1;
+
+    if(Jl1c3() == Jl2c3() || Jl1c3() == Jl3c3())
+    {
+        multiplicador++;
+        if(Jl1c3() == Jl2c3() && Jl1c3() == Jl3c3())
+        {
+            multiplicador++;
+            return ((Jl1c3() + Jl2c3() + Jl3c3()) * multiplicador);
+        }else if (Jl1c3() == Jl2c3())
+        {
+            return ((Jl1c3() + Jl2c3()) * multiplicador + Jl3c3());
+        }else if (Jl1c3() == Jl3c3())
+        {
+            return ((Jl1c3() + Jl3c3()) * multiplicador + Jl2c3());
+        }
+    } else if(Jl2c3() == Jl3c3())
+    {
+        multiplicador++;
+        return ((Jl2c3() + Jl3c3()) * multiplicador + Jl1c3());
+    }else
+    {
+        return (Jl1c3() + Jl2c3() + Jl3c3());
+    }
+
+}
+
+function iCol1(){
+
+    let multiplicador = 1;
+
+    if(Il1c1() == Il2c1() || Il1c1() == Il3c1())
+    {
+        multiplicador++;
+        if(Il1c1() == Il2c1() && Il1c1() == Il3c1())
+        {
+            multiplicador++;
+            return ((Il1c1() + Il2c1() + Il3c1()) * multiplicador);
+        }else if (Il1c1() == Il2c1())
+        {
+            return ((Il1c1() + Il2c1()) * multiplicador + Il3c1());
+        }else if (Il1c1() == Il3c1())
+        {
+            return ((Il1c1() + Il3c1()) * multiplicador + Il2c1());
+        }
+    } else if(Il2c1() == Il3c1())
+    {
+        multiplicador++;
+        return ((Il2c1() + Il3c1()) * multiplicador + Il1c1());
+    }else
+    {
+        return (Il1c1() + Il2c1() + Il3c1());
+    }
+
+}
+
+function iCol2(){
+
+    let multiplicador = 1;
+
+    if(Il1c2() == Il2c2() || Il1c2() == Il3c2())
+    {
+        multiplicador++;
+        if(Il1c2() == Il2c2() && Il1c2() == Il3c2())
+        {
+            multiplicador++;
+            return ((Il1c2() + Il2c2() + Il3c2()) * multiplicador);
+        }else if (Il1c2() == Il2c2())
+        {
+            return ((Il1c2() + Il2c2()) * multiplicador + Il3c2());
+        }else if (Il1c2() == Il3c2())
+        {
+            return ((Il1c2() + Il3c2()) * multiplicador + Il2c2());
+        }
+    } else if(Il2c2() == Il3c2())
+    {
+        multiplicador++;
+        return ((Il2c2() + Il3c2()) * multiplicador + Il1c2());
+    }else
+    {
+        return (Il1c2() + Il2c2() + Il3c2());
+    }
+
+}
+
+function iCol3(){
+
+    let multiplicador = 1;
+
+    if(Il1c3() == Il2c3() || Il1c3() == Il3c3())
+    {
+        multiplicador++;
+        if(Il1c3() == Il2c3() && Il1c3() == Il3c3())
+        {
+            multiplicador++;
+            return ((Il1c3() + Il2c3() + Il3c3()) * multiplicador);
+        }else if (Il1c3() == Il2c3())
+        {
+            return ((Il1c3() + Il2c3()) * multiplicador + Il3c3());
+        }else if (Il1c3() == Il3c3())
+        {
+            return ((Il1c3() + Il3c3()) * multiplicador + Il2c3());
+        }
+    } else if(Il2c3() == Il3c3())
+    {
+        multiplicador++;
+        return ((Il2c3() + Il3c3()) * multiplicador + Il1c3());
+    }else
+    {
+        return (Il1c3() + Il2c3() + Il3c3());
+    }
+
+}
