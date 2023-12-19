@@ -1,3 +1,4 @@
+import { iRemover } from "./remove.js";
 
 
 
@@ -211,14 +212,17 @@ function iSelectCol1(valorAtual){
     if(Il3c1.innerHTML === '')
     {
         Il3c1.innerHTML = valorAtual;
+        iRemover(1, valorAtual);
         return true;
     }else if(Il2c1.innerHTML == '')
     {
         Il2c1.innerHTML = valorAtual;
+        iRemover(1, valorAtual);
         return true;
     }else if(Il1c1.innerHTML == '')
     {
         Il1c1.innerHTML = valorAtual;
+        iRemover(1, valorAtual);
         return true;
     }else
     {
@@ -230,14 +234,17 @@ function iSelectCol2(valorAtual){
     if(Il3c2.innerHTML === '')
     {
         Il3c2.innerHTML = valorAtual;
+        iRemover(2, valorAtual);
         return true;
     }else if(Il2c2.innerHTML == '')
     {
         Il2c2.innerHTML = valorAtual;
+        iRemover(2, valorAtual);
         return true;
     }else if(Il1c2.innerHTML == '')
     {
         Il1c2.innerHTML = valorAtual;
+        iRemover(2, valorAtual);
         return true;
     }else
     {
@@ -249,14 +256,17 @@ function iSelectCol3(valorAtual){
     if(Il3c3.innerHTML === '')
     {
         Il3c3.innerHTML = valorAtual;
+        iRemover(3, valorAtual);
         return true;
     }else if(Il2c3.innerHTML == '')
     {
         Il2c3.innerHTML = valorAtual;
+        iRemover(3, valorAtual);
         return true;
     }else if(Il1c3.innerHTML == '')
     {
         Il1c3.innerHTML = valorAtual;
+        iRemover(3, valorAtual);
         return true;
     }else
     {
