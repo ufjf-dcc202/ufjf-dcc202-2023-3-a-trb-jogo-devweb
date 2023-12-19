@@ -12,7 +12,7 @@ body, html{
 .pageIni{
     width: 100vw;
     height: 100vh;
-    background-image: url(/public/assets/teleinicial.png);
+    background-image: url(../assets/teleinicial.png);
     position: fixed;
     display: grid;
     place-items: center;
