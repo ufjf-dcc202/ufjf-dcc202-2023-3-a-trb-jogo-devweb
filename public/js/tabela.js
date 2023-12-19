@@ -109,12 +109,15 @@ function jCheio(){
         if(vencedor == 0)
         {
             alert('Você ganhou!');
+            location.reload();
         }else if(vencedor == 1)
         {
             alert('O adversário ganhou!');
+            location.reload();
         }else if(vencedor == 3)
         {
             alert('Empate!');
+            location.reload();
         }
     }
 }
