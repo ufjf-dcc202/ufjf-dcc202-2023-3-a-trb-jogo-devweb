@@ -172,6 +172,7 @@ function selectByInsert(valordado){
 }
 
 function randomSelect(valordado){
+
     const col = Math.floor(Math.random() * 3) + 1;
     if(col == 1)
     {
@@ -260,5 +261,13 @@ function iSelectCol3(valorAtual){
     }else
     {
         return false;
+    }
+}
+
+export function iCheio()
+{
+    if(!iSelectCol1(valordado) && !iSelectCol2(valordado) && !iSelectCol3(valordado))
+    {
+        return true;
     }
 }

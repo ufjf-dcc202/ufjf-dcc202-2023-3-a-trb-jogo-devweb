@@ -1,7 +1,7 @@
-import { iSelectCol } from "./adiversario.js";
+import { iCheio, iSelectCol } from "./adiversario.js";
 import { dado } from "./dado.js";
-import { pontuacaoJogador, pontuacaoadiversario } from "./pontuação.js";
-import { podecol1, podecol2, podecol3, selectCol } from "./tabela.js";
+import { final, pontuacaoJogador, pontuacaoadiversario } from "./pontuação.js";
+import { jCheio, podecol1, podecol2, podecol3, selectCol } from "./tabela.js";
 
 const rodar = document.querySelector('#rolar');
 const c1 = document.querySelector('#c1');
@@ -34,6 +34,21 @@ function turnojogador()
 
 function turnocomputador()
 {
+    if(jCheio())
+    {
+        const vencedor = final();
+        if(vencedor == 0)
+        {
+            alert('Você ganhou!');
+        }else if(vencedor == 1)
+        {
+            alert('O adversário ganhou!');
+        }else if(vencedor == 3)
+        {
+            alert('Empate!');
+        }
+    }
+
     const valorAtual = dado();
     Icaixadado.innerHTML = valorAtual;
 
@@ -44,6 +59,21 @@ function turnocomputador()
     ptsAdv.innerHTML = totalComputador;
 
     rodar.addEventListener('click', turnojogador);
+
+    if(iCheio())
+    {
+        const vencedor = final();
+        if(vencedor == 0)
+        {
+            alert('Você ganhou!');
+        }else if(vencedor == 1)
+        {
+            alert('O adversário ganhou!');
+        }else if(vencedor == 3)
+        {
+            alert('Empate!');
+        }
+    }
 }
 
 function selectCol1()
@@ -56,6 +86,7 @@ function selectCol1()
         totalJogador = pontuacaoJogador();
         ptsJgdr.innerHTML = totalJogador;
 
+        
         turnocomputador();
     } 
 }

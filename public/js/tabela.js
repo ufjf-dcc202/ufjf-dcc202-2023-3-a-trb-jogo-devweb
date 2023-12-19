@@ -82,3 +82,10 @@ export function podecol3(){
         return false;
     }  
 }
+
+export function jCheio(){
+    if(!podecol1() && !podecol2() && !podecol3())
+    {
+        return true;
+    }
+}
