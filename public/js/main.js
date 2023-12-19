@@ -23,13 +23,9 @@ function turnojogador()
     const valorAtual = dado();
     Jcaixadado.innerHTML = valorAtual;
 
-    c1.removeEventListener('click', selectCol1);
-    c2.removeEventListener('click', selectCol2);
-    c3.removeEventListener('click', selectCol3);
+    desativarBotoes();
     
-    c1.addEventListener('click', selectCol1);
-    c2.addEventListener('click', selectCol2);
-    c3.addEventListener('click', selectCol3);
+    ativarBotoes();
 }
 
 function turnocomputador()
@@ -50,6 +46,7 @@ function turnocomputador()
 
 function selectCol1()
 {
+    desativarBotoes();
     const pode = podecol1();
     if(pode){
         selectCol(1, Jcaixadado.innerHTML);
@@ -65,6 +62,7 @@ function selectCol1()
 
 function selectCol2()
 {
+    desativarBotoes();
     const pode = podecol2();
     if(pode){
         selectCol(2, Jcaixadado.innerHTML);
@@ -79,6 +77,7 @@ function selectCol2()
 
 function selectCol3()
 {
+    desativarBotoes();
     const pode = podecol3();
     if(pode){
         selectCol(3, Jcaixadado.innerHTML);
@@ -89,4 +88,18 @@ function selectCol3()
     
         turnocomputador();
     }
+}
+
+function desativarBotoes()
+{
+    c1.removeEventListener('click', selectCol1);
+    c2.removeEventListener('click', selectCol2);
+    c3.removeEventListener('click', selectCol3);
+}
+
+function ativarBotoes()
+{
+    c1.addEventListener('click', selectCol1);
+    c2.addEventListener('click', selectCol2);
+    c3.addEventListener('click', selectCol3);
 }
