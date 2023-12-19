@@ -21,8 +21,10 @@ export function selectCol(col, valorAtual)
         
         }       
         jRemover(col, valorAtual);
-        jCheio();
-        return
+        setTimeout(function(){
+            jCheio();
+            return;
+        }, 500);
    }
 
     if(col == 2)
@@ -41,8 +43,10 @@ export function selectCol(col, valorAtual)
         
         }
         jRemover(col, valorAtual);
-        jCheio();
-        return;
+        setTimeout(function(){
+            jCheio();
+            return;
+        }, 500);
     }
 
     if(col == 3)
@@ -62,8 +66,10 @@ export function selectCol(col, valorAtual)
         }
 
         jRemover(col, valorAtual);
-        jCheio();
-        return;
+        setTimeout(function(){
+            jCheio();
+            return;
+        }, 500);
     }
 }
 

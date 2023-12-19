@@ -1,3 +1,4 @@
+import { final } from "./pontuação.js";
 import { iRemover } from "./remove.js";
 
 
@@ -227,7 +228,9 @@ function iSelectCol1(valorAtual){
     }
 
     iRemover(1, valorAtual);
-    iCheio();
+    setTimeout(function(){  
+        iCheio();
+    }, 1000);
     return true;
 }
 
@@ -250,7 +253,9 @@ function iSelectCol2(valorAtual){
     }
 
     iRemover(2, valorAtual);
-    iCheio();
+    setTimeout(function(){
+        iCheio();
+    }, 1000);
     return true;
 }
 
@@ -273,7 +278,9 @@ function iSelectCol3(valorAtual){
     }
 
     iRemover(3, valorAtual);
-    iCheio();
+    setTimeout(function(){
+        iCheio();
+    }, 1000);
     return true;
 }
 
