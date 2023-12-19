@@ -56,3 +56,15 @@
     justify-content: center;
     margin-left: 40%;
 }
+
+.selectCol{
+    width: 100%;
+}
+
+.diceSelect{
+    margin: 3% 0 0 0;
+}
+
+.midSelect{
+    margin: 3% 2% 0 2%;
+}
