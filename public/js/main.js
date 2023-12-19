@@ -12,6 +12,8 @@ rodar.addEventListener('click', turnojogador);
 
 function turnojogador() 
 {
+    rodar.removeEventListener('click', turnojogador);
+
     const valorAtual = dado();
     caixadado.innerHTML = valorAtual;
 
@@ -33,14 +35,20 @@ function turnocomputador()
 function selectCol1()
 {
     selectCol(1, caixadado.innerHTML);
+    caixadado.innerHTML = '';
+    rodar.addEventListener('click', turnojogador);
 }
 
 function selectCol2()
 {
     selectCol(2, caixadado.innerHTML);
+    caixadado.innerHTML = '';
+    rodar.addEventListener('click', turnojogador);
 }
 
 function selectCol3()
 {
     selectCol(3, caixadado.innerHTML);
+    caixadado.innerHTML = '';
+    rodar.addEventListener('click', turnojogador);
 }
