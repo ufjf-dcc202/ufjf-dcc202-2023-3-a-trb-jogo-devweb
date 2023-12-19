@@ -1,4 +1,5 @@
 
+import { jRemover } from "./remove.js";
 
 export function selectCol(col, valorAtual)
 {
@@ -7,14 +8,17 @@ export function selectCol(col, valorAtual)
         if(Jl3c1.innerHTML === '')
         {
             Jl3c1.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
         }else if(Jl2c1.innerHTML == '')
         {
             Jl2c1.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
         }else if(Jl1c1.innerHTML == '')
         {
             Jl1c1.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
         }
    }
@@ -24,14 +28,17 @@ export function selectCol(col, valorAtual)
           if(Jl3c2.innerHTML === '')
           {
             Jl3c2.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
           }else if(Jl2c2.innerHTML == '')
           {
             Jl2c2.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
           }else if(Jl1c2.innerHTML == '')
           {
             Jl1c2.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
           }
     }
@@ -41,14 +48,17 @@ export function selectCol(col, valorAtual)
           if(Jl3c3.innerHTML === '')
           {
             Jl3c3.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
           }else if(Jl2c3.innerHTML == '')
           {
             Jl2c3.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
           }else if(Jl1c3.innerHTML == '')
           {
             Jl1c3.innerHTML = valorAtual;
+            jRemover(col, valorAtual);
             return;
           }
     }

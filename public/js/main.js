@@ -26,7 +26,7 @@ function turnojogador()
     c1.removeEventListener('click', selectCol1);
     c2.removeEventListener('click', selectCol2);
     c3.removeEventListener('click', selectCol3);
-
+    
     c1.addEventListener('click', selectCol1);
     c2.addEventListener('click', selectCol2);
     c3.addEventListener('click', selectCol3);
